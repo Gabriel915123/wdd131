@@ -6,7 +6,7 @@
 
   <title>WDD 131 – Dynamic Web Fundamentals – Gabriel Alexander Silva Enriquez</title>
 
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course home page by Gabriel Alexander Silva Enriquez. ">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course home page by Gabriel Alexander Silva Enriquez. Topics include HTML, CSS, JavaScript, responsive design, and web development fundamentals.">
   <meta name="author" content="Gabriel Alexander Silva Enriquez">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,30 +39,44 @@
     <section class="card">
       <h2>About Me</h2>
 
-      <img src="images/profile.jpeg" alt="Photo of Gabriel">
+      <div class="aboutme">
+        <p>
+          I am a QA Engineer with a focus on test automation, and I'm currently
+          studying web development to expand my software development skills.
+          I enjoy learning new technologies and building projects that combine
+          creativity with problem-solving.
+        </p>
+        <img src="images/profile.jpeg" alt="Photo of Gabriel" class="profile">
+      </div>
 
-      <p>
-        I am a QA Engineer with a focus on test automation, and I'm currently
-        studying web development to expand my software development skills.
-        I enjoy learning new technologies and building projects that combine
-        creativity with problem-solving.
-      </p>
+      <h3 class="location">Quito, Ecuador</h3>
+
+      <div class="country">
+        <figure>
+          <img src="images/ecuador_flag.png" alt="Official flag of Ecuador" class="flag">
+          <figcaption>Official Flag of Ecuador</figcaption>
+        </figure>
+        <p>
+          Ecuador is a small but remarkably diverse country in South America,
+          straddling the equator from which it takes its name. Despite covering less land
+          than many of its neighbors, it holds four distinct regions — the Pacific coast, the Andean highlands,
+          the Amazon rainforest, and the Galápagos Islands — each with its own climate and wildlife. 
+        </p>
+      </div>
     </section>
 
     <section class="card">
-      <h2>My Country</h2>
-
-      <img src="images/quito_city.jpg" alt="Photo representing my country">
-
-      <p>
-        Ecuador is a small but remarkably diverse country in South America, 
-        straddling the equator from which it takes its name. Despite covering less land 
-        than many of its neighbors, it holds four distinct regions — the Pacific coast, the Andean highlands, 
-        the Amazon rainforest, and the Galápagos Islands — each with its own climate and wildlife. The Galápagos alone
-        inspired Charles Darwin's theory of evolution and remain home to species found nowhere else on Earth. Quito, 
-        the capital, sits high in the Andes and is one of the best-preserved historic centers in Latin America. Ecuador's
-        currency is the US dollar, and its culture blends Indigenous, Spanish, and Afro-Ecuadorian influences into a rich national identity.
-      </p>
+      <h2>Web Dev Resources</h2>
+      <div class="resources">
+        <ul>
+          <li><a href="https://dev.to/" target="_blank" rel="noopener">Dev.to Community</a></li>
+          <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener">Smashing Magazine</a></li>
+          <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS Tricks</a></li>
+          <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3 Schools</a></li>
+          <li><a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a></li>
+          <li><a href="https://picsum.photos/" target="_blank" rel="noopener">Lorem Picsum Image Placeholder</a></li>
+        </ul>
+      </div>
     </section>
 
   </main>
@@ -70,7 +84,7 @@
   <footer>
     <p>
       &copy; <span id="currentyear"></span>
-      Gabriel Alexander Silva Enriquez, Utah, USA
+      Gabriel Alexander Silva Enriquez, Quito, Ecuador
     </p>
 
     <p id="lastModified"></p>

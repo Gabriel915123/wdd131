@@ -15,173 +15,176 @@
    (faster than @import, which blocks CSS parsing until fetched).
    ============================================ */
 
-:root {
-  --navy: #1b4f72;
-  --charcoal: #2b2b2b;
-  --paper: #f1f3ee;
-  --panel: #ffffff;
-  --amber: #e8c547;
-  --line: #d8dcd3;
-
-  --font-mono: "IBM Plex Mono", "Courier New", monospace;
-  --font-sans: "IBM Plex Sans", Arial, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  background-color: var(--paper);
-  color: #222;
-  font-family: var(--font-sans);
-  line-height: 1.6;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #fff;
+    color: #143357;
 }
-
-/* ---------------- header ---------------- */
 
 header {
-  padding: 0;
+    background-color: #0b214b;
+    color: #fff;
 }
 
 #course-title {
-  display: block;
-  text-align: center;
-  background-color: var(--navy);
-  color: #ffffff;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 1.15rem;
-  letter-spacing: 0.03em;
-  padding: 1.1rem 1rem;
+    display: block;
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
 }
-
-header nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem 1.75rem;
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: var(--charcoal);
-  padding: 0.85rem 1.5rem;
-}
-
-header nav a {
-  position: relative;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  padding: 0.25rem 0.1rem;
-}
-
-header nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--amber);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-header nav a:hover,
-header nav a:focus-visible {
-  color: var(--amber);
-}
-
-header nav a:hover::after,
-header nav a:focus-visible::after {
-  transform: scaleX(1);
-}
-
-/* ---------------- main ---------------- */
 
 main {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.75rem;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: .5rem;
 }
 
-main h1 {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0.5rem 0 1rem;
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px #000;
+    padding: 2px;
+    float: right;
+    margin: 1rem 0 1rem 1rem;
+}
+
+h1 {
+    grid-column: 1/3;
+	background-color: #fff;
+	padding: 1rem;
+	font-size: 2rem;
+	text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+	background-color: #292929;
+	margin: 0 auto;
+}
+
+nav a {
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+    flex: 1;
+}
+
+nav a:hover {
+	text-decoration: underline;
+    background-color: #253553;
+}
+
+footer {
+    background-color: #0b214b;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+#lastModified {
+    color: #fffb00;
+    font-size: 0.9rem;
 }
 
 .card {
-  background-color: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 1.5rem;
-  overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 10px;
 }
 
 .card h2 {
-  margin: -1.5rem -1.5rem 1.25rem;
-  padding: 0.85rem 1.5rem;
-  background-color: var(--navy);
-  color: #ffffff;
-  font-family: var(--font-mono);
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-align: center;
+    background-color: #0b214b;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0.7rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.7rem;
 }
 
-.card img {
-  width: 60%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 6px;
-  margin: 0 auto 1rem;
-  display: block;
+.card h3 {
+    width: 65%;
+    margin-left: 2rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 0;
 }
 
 .card p {
-  margin: 0 0 0.75rem;
-  font-size: 0.95rem;
+    padding: 1rem;
+    line-height: 1.6;
 }
 
-.card p:last-child {
-  margin-bottom: 0;
+.card img {
+    max-width: 100%;
+    height: auto;
 }
 
-@media (max-width: 700px) {
-  main {
-    grid-template-columns: 1fr;
-  }
+.profile {
+    width: 130px;
+    height: auto;
+    justify-self: end;
+    align-self: start;
 }
 
-/* ---------------- footer ---------------- */
-
-footer {
-  background-color: var(--navy);
-  color: #ffffff;
-  text-align: center;
-  padding: 1.25rem 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  margin-top: 2rem;
+.country {
+    display: grid;
+    grid-template-columns: 160px 390px;
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem;
 }
 
-footer p {
-  margin: 0.25rem 0;
+.country figure {
+    margin: 0;
+    text-align: center;
 }
 
-footer #lastModified {
-  color: var(--amber);
-  font-size: 0.8rem;
+.country figcaption {
+    margin-top: 7rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.country p {
+    margin: 0;
+    padding: 0;
+}
+
+.flag {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.aboutme {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    padding: 1rem;
+}
+
+.location {
+    position: relative;
+    top: -50px;
+}
+
+.resources {
+    display: flex;
+    align-items: center;
+    min-height: 350px;
+    padding: 1rem;
+}
+
+.resources ul {
+    line-height: 1.7;
+    padding-left: 2rem;
 }
