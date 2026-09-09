@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temples – WDD 131 – Gabriel Alexander Silva Enriquez</title>
+
+    <meta name="description" content="A photo album of temples for WDD 131 – Dynamic Web Fundamentals, by Gabriel Alexander Silva Enriquez. Features responsive, mobile-first HTML and CSS.">
+    <meta name="author" content="Gabriel Alexander Silva Enriquez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Mobile-first: temples.css always applies; temples-large.css only loads/applies at wider viewports -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 700px)">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-bar">
+            <p class="site-title">Temple Album</p>
+            <button id="hamburger-btn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span id="hamburger-icon">&#9776;</span>
+            </button>
+        </div>
+        <nav id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="#old">Old</a>
+            <a href="#new">New</a>
+            <a href="#large">Large</a>
+            <a href="#small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temples Around the World</h1>
+
+        <figure>
+            <img src="images/salt_lake_city_temple.png" alt="Salt Lake Temple in Salt Lake City, Utah" loading="lazy" width="400" height="300">
+            <figcaption>Salt Lake Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/provo_temple.png" alt="Provo City Center Temple" >
+            <figcaption>Provo City Center Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/quito_temple.png" alt="Quito Ecuador Temple">
+            <figcaption>Quito Ecuador Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/payson_temple.png" alt="Payson Utah Temple">
+            <figcaption>Payson Utah Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/rome_temple.png" alt="Rome Italy Temple" >
+            <figcaption>Rome Italy Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/bogota_temple.png" alt="Bogotá Colombia Temple" >
+            <figcaption>Bogotá Colombia Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/tokyo_temple.png" alt="Tokyo Japan Temple" >
+            <figcaption>Tokyo Japan Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/manti_utah_temple.png" alt="Manti Utah Temple" >
+            <figcaption>Manti Utah Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/guatemala_temple.png" alt="Guatemala City Guatemala Temple" >
+            <figcaption>Guatemala City Guatemala Temple</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Gabriel Alexander Silva Enriquez, Utah, USA
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

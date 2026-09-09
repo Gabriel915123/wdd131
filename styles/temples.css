@@ -1,0 +1,178 @@
+/* ============================================
+   Temples — WDD 131 — Gabriel Alexander Silva Enriquez
+   Mobile-first base styles (temples-large.css layers on
+   larger-viewport overrides only).
+
+   Color scheme:
+     --ink:    #1B2A41  (deep indigo — header, footer, headings)
+     --paper:  #F8F6F2  (warm off-white page background)
+     --panel:  #FFFFFF  (card / figure surface)
+     --gold:   #C9A227  (accent — hover states, captions)
+     --line:   #E4DFD3  (hairline borders)
+
+   Typography:
+     Headings / site title -> "Cormorant Garamond" (elegant serif)
+     Body / nav / captions -> "Nunito Sans" (clean, legible sans)
+   ============================================ */
+
+:root {
+  --ink: #1b2a41;
+  --paper: #f8f6f2;
+  --panel: #ffffff;
+  --gold: #c9a227;
+  --line: #e4dfd3;
+
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Nunito Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: #222;
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* ---------------- header ---------------- */
+
+header {
+  background-color: var(--ink);
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.site-title {
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+/* hamburger button: mobile only */
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+}
+
+/* mobile: nav starts collapsed, JS toggles the .open class */
+header nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+header nav.open {
+  max-height: 20rem;
+}
+
+header nav a {
+  position: relative;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  background-color: var(--gold);
+  color: var(--ink);
+}
+
+/* ---------------- main ---------------- */
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+main h1 {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--ink);
+  margin: 0 0 1.75rem;
+  grid-column: 1 / -1;
+}
+
+/* mobile view: figures stack in a single column */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+figure {
+  margin: 0;
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--ink);
+  border-top: 3px solid var(--gold);
+}
+
+/* ---------------- footer ---------------- */
+
+footer {
+  background-color: var(--ink);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+footer #lastModified {
+  color: var(--gold);
+}
