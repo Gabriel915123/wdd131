@@ -110,10 +110,14 @@ header nav a:focus-visible {
 
 /* ---------------- main ---------------- */
 
+/* mobile view: limited width, centered, figures stack in a single column */
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 1.5rem 1rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
 }
 
 main h1 {
@@ -124,13 +128,6 @@ main h1 {
   color: var(--ink);
   margin: 0 0 1.75rem;
   grid-column: 1 / -1;
-}
-
-/* mobile view: figures stack in a single column */
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
 }
 
 figure {
