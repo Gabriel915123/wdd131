@@ -6,87 +6,43 @@
    a loading optimization only — this block does the work).
    ============================================ */
 
-@media (min-width: 700px) {
-
-  main {
-    max-width: 1100px;
-  }
+@media screen and (min-width: 700px) {
 
   .place-header h1 {
-    font-size: 2.75rem;
-  }
-
-  /* hero image becomes a positioning context for the two overlay cards */
-  .hero-wrap {
-    position: relative;
+    font-size: 3rem;
   }
 
   .hero-image {
-    height: 520px;
+    min-height: 650px;
     object-fit: cover;
   }
 
-  /* cards become compact overlay badges: a colored tab header
-     sized to its own content, sitting above a wider translucent
-     panel — each shrink-wraps to its own content width */
-  .card {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    margin: 0;
-    background: none;
-    border: none;
-    border-radius: 0;
-    overflow: visible;
-  }
-
-  .data-card {
-    top: 1.5rem;
-    left: 1.5rem;
-    align-items: flex-start;
-  }
-
+  .data-card,
   .weather-card {
-    bottom: 1.5rem;
-    right: 1.5rem;
-    align-items: flex-end;
-  }
-
-  .card h2 {
-    width: fit-content;
-    background-color: var(--blue);
-    color: #ffffff;
-    text-align: left;
-    border-bottom: none;
-    padding: 0.6rem 1.25rem;
-    font-size: 1.15rem;
+    position: absolute;
+    width: 300px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.92);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   }
 
-  .weather-card h2 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  .data-card {
+    top: 3rem;
+    left: 2rem;
   }
 
-  .card dl {
-    width: max-content;
-    min-width: 220px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 0.85rem 1.25rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+  .weather-card {
+    bottom: 3rem;
+    right: 2rem;
   }
 
-  /* wide view uses the emoji pseudo-element instead of the SVG icon */
   .weather-icon-mobile {
     display: none;
   }
 
   .weather-card h2::after {
-    content: "\26C5"; /* ⛅ */
-    font-family: var(--font-body);
-    font-size: 1.15rem;
+    content: " ⛅";
+    margin-left: 0.5rem;
   }
 
 }
