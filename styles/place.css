@@ -1,0 +1,162 @@
+/* ============================================
+   Ecuador — WDD 131 — Gabriel Alexander Silva Enriquez
+   Mobile-first base styles (place-large.css layers on
+   wider-viewport overrides only).
+
+   Color scheme — Ecuador flag (yellow / blue / red):
+     --yellow: #FFD100  (header band)
+     --blue:   #003893  (card headers, hero accents)
+     --red:    #CE1126  (footer, flag stripe accent)
+     --paper:  #FAFAF7  (page background)
+     --panel:  #FFFFFF  (card surface)
+     --ink:    #14213D  (body text)
+     --line:   #E3E0D8  (hairline borders)
+
+   Typography:
+     Headings -> "Playfair Display" (bold serif)
+     Body / data labels -> "Work Sans" (clean sans)
+   ============================================ */
+
+:root {
+  --yellow: #ffd100;
+  --blue: #003893;
+  --red: #ce1126;
+  --paper: #fafaf7;
+  --panel: #ffffff;
+  --ink: #14213d;
+  --line: #e3e0d8;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Work Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* ---------------- header ---------------- */
+
+.place-header {
+  background-color: var(--yellow);
+  text-align: center;
+  padding: 1.75rem 1rem;
+}
+
+.place-header h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--ink);
+}
+
+/* thin solid stripe under the header */
+.flag-stripe {
+  height: 10px;
+  background-color: var(--blue);
+}
+
+/* ---------------- main / hero ---------------- */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------------- cards (mobile: stacked, static, plain headings) ---------------- */
+
+.card {
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  margin: 1.25rem 1rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.card h2 {
+  margin: 0;
+  text-align: center;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 0.85rem 1rem 0.6rem;
+  border-bottom: 2px solid var(--line);
+}
+
+.card dl {
+  margin: 0;
+  padding: 1rem;
+}
+
+.card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.card dl div:last-child {
+  border-bottom: none;
+}
+
+.card dt {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.card dd {
+  margin: 0;
+  text-align: right;
+}
+
+/* mobile weather icon: shown centered under the "Weather" heading */
+.weather-icon-mobile {
+  display: block;
+  margin: 0.75rem auto 0;
+}
+
+/* the wide-view emoji pseudo-element icon stays inactive on mobile */
+.weather-card h2::after {
+  content: "";
+}
+
+/* ---------------- footer ---------------- */
+
+footer {
+  background-color: var(--red);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}

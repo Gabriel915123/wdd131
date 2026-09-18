@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecuador - Place</title>
+  <meta name="description" content="A responsive page about Ecuador including location information and weather.">
+  <meta name="author" content="Gabriel Alexander Silva Enriquez">
+
+  <link rel="stylesheet" href="styles/place.css">
+
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Ecuador</h1>
+  </header>
+
+  <main>
+
+    <picture class="hero">
+      <source media="(max-width: 600px)" srcset="images/ecuador-small.webp">
+      <source media="(max-width: 1000px)" srcset="images/ecuador-medium.webp">
+
+      <img
+        src="images/ecuador-large.webp"
+        srcset="images/ecuador-small.webp 600w,
+                images/ecuador-medium.webp 1000w,
+                images/ecuador-large.webp 1600w"
+        sizes="100vw"
+        alt="Landscape of Ecuador">
+    </picture>
+
+    <section class="data">
+      <h2>Data</h2>
+
+      <div class="data-content">
+        <p><strong>Area:</strong> 283,561 km²</p>
+        <p><strong>Population:</strong> 18 million</p>
+        <p><strong>Capital:</strong> Quito</p>
+        <p><strong>Language:</strong> Spanish</p>
+        <p><strong>Currency:</strong> US Dollar</p>
+        <p><strong>Time Zone:</strong> UTC-5</p>
+        <p><strong>Calling Code:</strong> +593</p>
+      </div>
+    </section>
+
+    <section class="weather">
+      <h2>Weather</h2>
+
+      <img
+        class="weather-icon-mobile"
+        src="images/partly-cloudy.svg"
+        alt="Partly cloudy weather">
+
+      <div class="weather-content">
+        <p><strong>Temperature:</strong> 8 °C</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind:</strong> 10 km/h</p>
+        <p>
+          <strong>Wind Chill:</strong>
+          <span id="windchill">N/A</span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span>
+      Gabriel Alexander Silva Enriquez, Ecuador
+    </p>
+
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
