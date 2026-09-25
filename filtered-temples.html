@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temples – WDD 131 – Gabriel Alexander Silva Enriquez</title>
+
+    <meta name="description" content="A photo album of temples for WDD 131 – Dynamic Web Fundamentals, by Gabriel Alexander Silva Enriquez. Filterable by dedication era and temple size.">
+    <meta name="author" content="Gabriel Alexander Silva Enriquez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Mobile-first: filtered-temples.css always applies; temples-large.css layers on wider-viewport overrides -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 700px)">
+
+    <script src="scripts/filter-temples.js" defer></script>
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-bar">
+            <p class="site-title">Temple Album</p>
+            <button id="hamburger-btn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+                <span id="hamburger-icon">&#9776;</span>
+            </button>
+        </div>
+        <nav id="primary-nav">
+            <a href="#" data-filter="home">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temples Around the World</h1>
+
+        <div id="temple-gallery"></div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Gabriel Alexander Silva Enriquez, Quito, Ecuador
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
