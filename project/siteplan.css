@@ -1,0 +1,226 @@
+/* ============================================
+   Eternal Path — Site Plan — WDD 131 — Gabriel Alexander Silva Enriquez
+
+   Color scheme:
+     --deep-blue: #1B3A5C  (headers, footer, headings)
+     --gold:      #C9A227  (accents, links, borders)
+     --paper:     #FAF8F3  (page background)
+     --ink:       #222222  (body text)
+
+   Typography:
+     Headings -> "Playfair Display" (serif)
+     Body     -> "Nunito Sans" (sans-serif)
+   ============================================ */
+
+:root {
+  --deep-blue: #1b3a5c;
+  --gold: #c9a227;
+  --paper: #faf8f3;
+  --ink: #222222;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Nunito Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--deep-blue);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+header .tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: var(--gold);
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--gold);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--deep-blue);
+  font-size: 1.5rem;
+  border-left: 5px solid var(--gold);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--gold);
+}
+
+code {
+  background-color: rgba(201, 162, 39, 0.15);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.domain-note {
+  font-style: italic;
+  color: #555;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------------- color swatches ---------------- */
+
+.color-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.color-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.swatch-blue {
+  background-color: var(--deep-blue);
+}
+
+.swatch-gold {
+  background-color: var(--gold);
+}
+
+.swatch-paper {
+  background-color: var(--paper);
+}
+
+.swatch-ink {
+  background-color: var(--ink);
+}
+
+/* ---------------- wireframes ---------------- */
+
+.wireframes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.wireframe {
+  margin: 0;
+  border: 2px solid var(--deep-blue);
+  border-radius: 6px;
+  padding: 0.75rem;
+  background-color: #ffffff;
+}
+
+.wireframe figcaption {
+  text-align: center;
+  font-weight: 600;
+  color: var(--deep-blue);
+  margin-bottom: 0.75rem;
+}
+
+.wireframe-mobile {
+  width: 180px;
+}
+
+.wireframe-desktop {
+  width: 340px;
+}
+
+.wf-box {
+  border: 1px dashed #999;
+  background-color: var(--paper);
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.5rem 0.25rem;
+  margin-bottom: 0.4rem;
+  color: #555;
+}
+
+.wf-header {
+  background-color: rgba(27, 58, 92, 0.1);
+}
+
+.wf-nav {
+  background-color: rgba(201, 162, 39, 0.15);
+}
+
+.wf-hero {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wf-footer {
+  background-color: rgba(27, 58, 92, 0.1);
+}
+
+.wf-row {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.wf-row .wf-box {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ---------------- footer ---------------- */
+
+footer {
+  background-color: var(--deep-blue);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.85rem;
+}
