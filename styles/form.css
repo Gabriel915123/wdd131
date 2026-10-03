@@ -1,0 +1,212 @@
+/* ============================================
+   Product Review Form — WDD 131 — Gabriel Alexander Silva Enriquez
+
+   Color scheme:
+     --header-bg: #2E3A59  (form header band)
+     --card-bg:   #F4F2F7  (form body background)
+     --panel:     #FFFFFF  (input backgrounds)
+     --accent:    #E07A5F  (buttons, focus states, checked controls)
+     --text:      #22262E  (body text)
+     --line:      #CBC7D6  (borders)
+
+   Typography:
+     Headings / labels -> "Poppins" (geometric sans, confident weight)
+     Body / inputs      -> "Inter" (clean, highly legible for forms)
+   ============================================ */
+
+:root {
+  --header-bg: #2e3a59;
+  --card-bg: #f4f2f7;
+  --panel: #ffffff;
+  --accent: #e07a5f;
+  --text: #22262e;
+  --line: #cbc7d6;
+
+  --font-heading: "Poppins", Arial, sans-serif;
+  --font-body: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e8e6ee;
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.form-page {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+
+.review-form {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.review-form h1 {
+  margin: 0;
+  background-color: var(--header-bg);
+  color: #ffffff;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  padding: 1.25rem 1rem;
+}
+
+.field {
+  padding: 1rem 1.25rem;
+  border: none;
+}
+
+fieldset.field {
+  border: none;
+  padding: 1rem 1.25rem;
+}
+
+legend {
+  padding: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+label {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.optional {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background-color: var(--panel);
+  color: var(--text);
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.25);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ---- rating stars ---- */
+
+.rating-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.rating-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.rating-option label {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.rating-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+}
+
+/* ---- checkboxes ---- */
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.checkbox-row label {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ---- submit ---- */
+
+.submit-field {
+  padding-top: 0.5rem;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: var(--panel);
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus-visible {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* ---- footer ---- */
+
+footer {
+  background-color: var(--header-bg);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
