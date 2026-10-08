@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Five Stages – Plan of Salvation</title>
+
+  <meta name="description" content="Explore the five stages of the Plan of Salvation, from premortal life through the resurrection to the three degrees of glory.">
+  <meta name="author" content="Gabriel Alexander Silva Enriquez">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/stages.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-bar">
+      <a href="index.html" class="site-title">Plan of Salvation</a>
+      <p class="site-tagline">Life before, during, and after mortality</p>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="stages.html" aria-current="page">Stages</a>
+      <a href="scriptures.html">Scriptures</a>
+      <a href="share.html">Share</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <h1 class="page-title">The Five Stages</h1>
+    <p class="page-intro">
+      Select a stage below to read about it. Each stage builds on the one before it,
+      forming a complete picture of where we came from, why we are here, and where
+      we are going.
+    </p>
+
+    <ul class="stage-list" id="stage-list">
+      <!-- Buttons are generated dynamically by stages.js -->
+    </ul>
+
+    <div class="stage-detail" id="stage-detail" aria-live="polite">
+      <!-- Content is populated dynamically by stages.js -->
+      <noscript><p>Please turn on JavaScript to read about each stage.</p></noscript>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span>
+      Plan of Salvation &mdash; Gabriel Alexander Silva Enriquez, Quito, Ecuador
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

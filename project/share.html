@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Share Your Thoughts – Plan of Salvation</title>
+
+  <meta name="description" content="Share a reflection or question about the Plan of Salvation and choose the stage that means the most to you.">
+  <meta name="author" content="Gabriel Alexander Silva Enriquez">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/share.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-bar">
+      <a href="index.html" class="site-title">Plan of Salvation</a>
+      <p class="site-tagline">Life before, during, and after mortality</p>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="stages.html">Stages</a>
+      <a href="scriptures.html">Scriptures</a>
+      <a href="share.html" aria-current="page">Share</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <h1 class="page-title">Share Your Thoughts</h1>
+    <p class="page-intro">
+      Which stage of the Plan of Salvation means the most to you? Share a short
+      reflection, question, or experience below.
+    </p>
+
+    <form class="share-form" method="get" action="thankyou.html" id="share-form">
+
+      <div class="field">
+        <label for="stage">Which stage are you reflecting on?</label>
+        <select id="stage" name="stage" required>
+          <option value="" disabled selected>Select a stage ...</option>
+          <option value="Premortal Life">Premortal Life</option>
+          <option value="Earth Life">Earth Life</option>
+          <option value="Spirit World">Spirit World</option>
+          <option value="Resurrection &amp; Judgment">Resurrection &amp; Judgment</option>
+          <option value="Degrees of Glory">Degrees of Glory</option>
+        </select>
+      </div>
+
+      <fieldset class="field">
+        <legend>How familiar were you with this topic before visiting this site?</legend>
+
+        <div class="radio-row">
+          <input type="radio" id="familiarity-1" name="familiarity" value="New to me" required>
+          <label for="familiarity-1">New to me</label>
+        </div>
+
+        <div class="radio-row">
+          <input type="radio" id="familiarity-2" name="familiarity" value="Somewhat familiar" required>
+          <label for="familiarity-2">Somewhat familiar</label>
+        </div>
+
+        <div class="radio-row">
+          <input type="radio" id="familiarity-3" name="familiarity" value="Very familiar" required>
+          <label for="familiarity-3">Very familiar</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="reflection">Your Reflection</label>
+        <textarea id="reflection" name="reflection" rows="5" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="name">Your Name <span class="optional">(Optional)</span></label>
+        <input type="text" id="name" name="name" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <input type="submit" value="Share Reflection">
+      </div>
+
+      <p class="form-feedback" id="form-feedback" role="alert"></p>
+
+    </form>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span>
+      Plan of Salvation &mdash; Gabriel Alexander Silva Enriquez, Quito, Ecuador
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

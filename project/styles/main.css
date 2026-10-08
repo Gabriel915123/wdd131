@@ -1,0 +1,503 @@
+/* ============================================
+   Plan of Salvation — WDD 131 Final Project — Gabriel Alexander Silva Enriquez
+   Mobile-first base styles, with a wider-viewport media query at the end.
+
+   Color scheme (from siteplan.html):
+     --deep-blue: #1B3A5C  (header, footer, headings)
+     --gold:      #C9A227  (accents and borders; text only on deep blue)
+     --gold-dark: #7A5D00  (gold text on light backgrounds, 5.8:1 contrast)
+     --paper:     #FAF8F3  (page background)
+     --panel:     #FFFFFF  (card surfaces)
+     --ink:       #222222  (body text)
+
+   Typography:
+     Headings -> "Playfair Display" (serif)
+     Body     -> "Nunito Sans" (sans-serif)
+   ============================================ */
+
+:root {
+  --deep-blue: #1b3a5c;
+  --gold: #c9a227;
+  --gold-dark: #7a5d00;
+  --paper: #faf8f3;
+  --panel: #ffffff;
+  --ink: #222222;
+  --line: #e3ded0;
+  --field-border: #6b7a8f;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Nunito Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--deep-blue);
+}
+
+main a:hover,
+main a:focus-visible {
+  color: var(--gold-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------------- header / nav ---------------- */
+
+.site-header {
+  background-color: var(--deep-blue);
+  color: #ffffff;
+}
+
+.header-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem 0.75rem;
+}
+
+.site-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--gold);
+  text-align: center;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1rem;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header a:hover,
+.site-header a:focus-visible,
+.site-nav a[aria-current="page"] {
+  color: var(--gold);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+  border-bottom-color: var(--gold);
+}
+
+/* ---------------- layout ---------------- */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--deep-blue);
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.page-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  color: #444;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--deep-blue);
+  border-left: 5px solid var(--gold);
+  padding-left: 0.75rem;
+  font-size: 1.4rem;
+}
+
+/* ---------------- hero ---------------- */
+
+.hero {
+  position: relative;
+  margin: -2rem -1.25rem 2rem;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-caption {
+  background-color: var(--deep-blue);
+  color: var(--gold);
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  margin: 0;
+}
+
+/* ---------------- cards (home + resources) ---------------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.card {
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.card-icon {
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-family: var(--font-heading);
+  color: var(--deep-blue);
+  margin-top: 0;
+}
+
+.card a.card-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ---------------- stages page ---------------- */
+
+.stage-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.stage-list button {
+  background-color: var(--panel);
+  border: 2px solid var(--deep-blue);
+  color: var(--deep-blue);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.stage-list button:hover,
+.stage-list button:focus-visible {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+.stage-list button[aria-pressed="true"] {
+  background-color: var(--deep-blue);
+  color: #ffffff;
+}
+
+.stage-detail {
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.stage-detail h2 {
+  margin-top: 0;
+  border-left: none;
+  padding-left: 0;
+}
+
+.stage-detail .scripture-ref {
+  font-style: italic;
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+/* ---------------- scripture list ---------------- */
+
+.scripture-list {
+  list-style: none;
+  padding: 0;
+}
+
+.scripture-list li {
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.scripture-list .ref {
+  font-weight: 700;
+  color: var(--deep-blue);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* ---------------- form (share.html) ---------------- */
+
+.share-form {
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1.1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--deep-blue);
+}
+
+.optional {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gold-dark);
+  font-size: 0.8rem;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--field-border);
+  border-radius: 6px;
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--deep-blue);
+  box-shadow: 0 0 0 3px rgba(27, 58, 92, 0.3);
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.1rem;
+}
+
+legend {
+  font-weight: 600;
+  color: var(--deep-blue);
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.radio-row input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--deep-blue);
+}
+
+.radio-row label {
+  margin: 0;
+  font-weight: 400;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: var(--deep-blue);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus-visible {
+  background-color: var(--gold);
+  color: var(--ink);
+}
+
+.form-feedback {
+  background-color: rgba(201, 162, 39, 0.15);
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+.form-feedback.visible {
+  display: block;
+}
+
+/* ---------------- thank you page ---------------- */
+
+.summary-box {
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.summary-box p {
+  margin: 0.4rem 0;
+}
+
+.summary-box .label {
+  font-weight: 700;
+  color: var(--deep-blue);
+}
+
+/* ---------------- footer ---------------- */
+
+footer {
+  background-color: var(--deep-blue);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* ---------------- accessibility helper ---------------- */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background-color: var(--gold);
+  color: var(--ink);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* ============================================
+   Wider-viewport overrides
+   ============================================ */
+
+@media screen and (min-width: 700px) {
+
+  .header-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
+
+  .site-tagline {
+    text-align: right;
+  }
+
+  .site-nav {
+    padding: 0 2rem 1rem;
+    gap: 2rem;
+  }
+
+  main {
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    margin: -2.5rem -2rem 2.5rem;
+  }
+
+  .hero img {
+    height: 360px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .stage-detail {
+    padding: 2rem 2.5rem;
+  }
+
+}
